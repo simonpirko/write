@@ -1,15 +1,41 @@
 package com.write.controllers;
 
-
+import com.write.models.Article;
+import com.write.models.Category;
+import com.write.services.ArticleService;
+import com.write.services.CategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 public class IndexController {
 
-	@RequestMapping(path = "/")
-	public void index() {
+	private ArticleService articleService;
+	private CategoryService categoryService;
 
+	@Autowired
+	public void setArticleService(ArticleService articleService) {
+		this.articleService = articleService;
 	}
 
+	@Autowired
+	public void setCategoryService(CategoryService categoryService){
+		this.categoryService = categoryService;
+	}
+
+	@RequestMapping(path = "/", method = RequestMethod.GET)
+	public ModelAndView index(Pageable pageable) {
+		ModelAndView mav = new ModelAndView();
+		Page<Article> articles = articleService.findAll(pageable);
+		Page<Category> categories = categoryService.findAllByCategoryAsc(pageable);
+		mav.addObject("articles", articles.getContent());
+		mav.addObject("categories", categories.getContent());
+		mav.setViewName("index");
+		return mav;
+	}
 }

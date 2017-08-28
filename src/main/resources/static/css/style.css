@@ -1,0 +1,107 @@
+a {
+    cursor: pointer;
+}
+
+.card .card-action a {
+    color: #00000099;
+    margin-right: auto;
+}
+
+.card .card-action a:hover {
+    color: #cfd8dc;
+    margin-right: auto;
+}
+
+.row .col.pull-s7 {
+    position: fixed;
+    left: 15%;
+}
+
+.row .col.s5 {
+    width: 15%;
+}
+
+.row .col.s7 {
+    width: 60%;
+}
+
+.row .col.pull-s8 {
+    position: fixed;
+    right: 65%;
+    width: 30%;
+    top: 53%;
+}
+
+.row .col.push-s5 {
+    left: 30%;
+}
+
+nav {
+    height: 45px;
+    line-height: 45px;
+}
+
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    height: 45px;
+    line-height: 45px;
+}
+
+nav .button-collapse i {
+    height: 45px;
+    line-height: 45px;
+}
+
+nav .brand-logo {
+    font-size: 1.6rem;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+.dropdown-content {
+    margin-top: 45px;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #00000099;
+}
+
+@media only screen and (min-width: 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 45px;
+        line-height: 45px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .navbar-fixed {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 601px) {
+    .row .col[class*="push-"], .row .col[class*="pull-"] {
+        position: initial;
+    }
+}
+
+@media only screen and (max-width: 601px) {
+    .row .col.s5 {
+        display: none;
+    }
+
+    .row .col.s7 {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .row .col.pull-s7 {
+        left: 10%;
+    }
+
+    .row .col.s5 {
+        width: 20%;
+    }
+}
