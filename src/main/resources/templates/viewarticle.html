@@ -6,7 +6,10 @@
 </head>
 <body>
 <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-<h1 th:text="${article.caption}"></h1>
+<div>
+    <span th:text="${article.description}" class="truncate error"></span>
+</div>
+<!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
 <!--/*/ <th:block th:include="fragments/head :: scripts"></th:block> /*/-->
 </body>
 </html>

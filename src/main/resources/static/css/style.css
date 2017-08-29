@@ -8,6 +8,10 @@ a:hover {
     transition: color .3s ease;
 }
 
+nav ul a {
+    padding: 0 25px;
+}
+
 .card .card-action a {
     color: #00000099;
     margin-right: auto;
@@ -66,7 +70,7 @@ nav .button-collapse i {
 }
 
 nav .brand-logo {
-    font-size: 1.6rem;
+    font-size: 2.0rem;
 }
 
 .row {
@@ -90,7 +94,7 @@ nav .brand-logo {
     }
 
     nav .brand-logo {
-        left: 15px;
+        left: 20px;
     }
 }
 
@@ -100,13 +104,13 @@ nav .brand-logo {
     }
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 620px) {
     .row .col.s5 {
         display: none;
     }
 
     .row .col.s7 {
-        width: auto;
+        width: 100%;
     }
 
     .card .card-action {
@@ -119,11 +123,21 @@ nav .brand-logo {
 }
 
 @media only screen and (max-width: 790px) {
-    .row .col.pull-s7 {
-        left: 10%;
+    .row .col.s5 {
+        display: none;
     }
 
-    .row .col.s5 {
-        width: 20%;
+    .card .card-action {
+        display: none;
+    }
+
+    .fixed-action-btn.horizontal {
+        display: none;
+    }
+
+    .row .col.push-s5 {
+        left: auto;
+        width: 100%;
     }
 }
+

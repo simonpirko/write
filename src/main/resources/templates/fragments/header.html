@@ -7,19 +7,44 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper blue-grey">
-                <a href="/" class="brand-logo">WRITE</a>
-                <!--<ul class="right hide-on-med-and-down">-->
+                <a href="/" class="brand-logo hide-on-med-only">WRITE</a>
+                <!--<ul class="right hide-on-large-only">-->
+                <!--<li><a class="dropdown-button" data-beloworigin="true" data-activates="dropdown1"><i class="material-icons">menu</i></a>-->
+                <!--</li>-->
+                <!--<ul id="dropdown1" class="dropdown-content">-->
                 <!--<li><a th:href="@{/registration}">Sign up</a></li>-->
                 <!--<li><a th:href="@{/login}">Sign in</a></li>-->
                 <!--</ul>-->
-                <ul class="right hide-on-med-and-down">
-                    <li><a class="dropdown-button" data-beloworigin="true" data-activates="dropdown1">Simon Pirko</a>
+                <!--</ul>-->
+                <ul class="right hide-on-large-only">
+                    <li><a class="dropdown-button" data-beloworigin="true" data-activates="dropdown2"><i
+                            class="material-icons">menu</i></a>
                     </li>
-                    <ul id="dropdown1" class="dropdown-content">
+                    <ul id="dropdown2" class="dropdown-content">
+                        <li><a th:href="@{/header.html}">Write</a></li>
+                        <li class="divider"></li>
                         <li><a th:href="@{/header.html}">Profile</a></li>
                         <li><a th:href="@{/header.html}">Settings</a></li>
                         <li class="divider"></li>
                         <li><a th:href="@{/header.html}">Sign out</a></li>
+                    </ul>
+                </ul>
+                <!--<ul class="right hide-on-med-and-down">-->
+                <!--<li><a class="dropdown-button" data-beloworigin="true" data-activates="dropdown3"><i class="material-icons">menu</i></a>-->
+                <!--</li>-->
+                <!--<ul id="dropdown3" class="dropdown-content">-->
+                <!--<li><a th:href="@{/registration}">Sign up</a></li>-->
+                <!--<li><a th:href="@{/login}">Sign in</a></li>-->
+                <!--</ul>-->
+                <!--</ul>-->
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-button" data-beloworigin="true" data-activates="dropdown4">Simon Pirko</a>
+                    </li>
+                    <ul id="dropdown4" class="dropdown-content">
+                        <li class="waves-effect waves-teal"><a th:href="@{/header.html}">Profile</a></li>
+                        <li class="waves-effect waves-teal"><a th:href="@{/header.html}">Settings</a></li>
+                        <li class="divider"></li>
+                        <li class="waves-effect waves-teal"><a th:href="@{/header.html}">Sign out</a></li>
                     </ul>
                 </ul>
             </div>

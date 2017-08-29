@@ -9,9 +9,9 @@
 <div>
     <div class="row">
         <div class="col s5 pull-s7">
-            <ul class="collapsible white-text" data-collapsible="accordion">
+            <ul class="collapsible hoverable white-text" data-collapsible="accordion">
                 <li>
-                    <div class="collapsible-header blue-grey">Category</div>
+                    <div class="collapsible-header blue-grey waves-effect waves-teal">Category</div>
                     <div class="collapsible-body blue-grey lighten-2">
                         <div class="my-collapsible-body">
                             <ul th:each="category : ${category}">
@@ -21,18 +21,18 @@
                     </div>
                 </li>
                 <li>
-                    <div class="collapsible-header blue-grey">Filter</div>
+                    <div class="collapsible-header blue-grey waves-effect waves-teal">Filter</div>
                     <div class="collapsible-body blue-grey lighten-2"><span>TEST</span></div>
                 </li>
                 <li>
-                    <div class="collapsible-header blue-grey">Search</div>
+                    <div class="collapsible-header blue-grey waves-effect waves-teal">Search</div>
                     <div class="collapsible-body blue-grey lighten-2"><span>TEST</span></div>
                 </li>
             </ul>
         </div>
         <div th:each=" article : ${article}">
             <div class="col s7 push-s5">
-                <div class="card blue-grey">
+                <div class="card hoverable blue-grey ">
                     <a th:href="${'article/' + article.id}">
                         <div class="card-content white-text center">
                             <span class="card-title" th:text="${article.caption}"></span>
