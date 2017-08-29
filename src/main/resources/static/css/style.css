@@ -8,16 +8,6 @@ a:hover {
     transition: color .3s ease;
 }
 
-/*.my-white-text a:hover {*/
-    /*color: blue;*/
-    /*transition: color .3s ease;*/
-/*}*/
-
-/*.my-white-text a:hover {*/
-    /*color: #cfd8dc;*/
-    /*transition: color .3s ease;*/
-/*}*/
-
 .card .card-action a {
     color: #00000099;
     margin-right: auto;
