@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 a {
     cursor: pointer;
     color: #00000099;
@@ -20,10 +30,6 @@ nav ul a {
 .card .card-action a:hover {
     color: #cfd8dc;
     margin-right: auto;
-}
-
-.my-collapsible-body {
-    margin-left: 15px;
 }
 
 .row .col.pull-s7 {
@@ -52,6 +58,20 @@ nav ul a {
 
 .pagination li.active {
     background-color: #607d8b;
+}
+
+.collapsible {
+    border-color: #607d8b;
+    border-radius: 2px;
+}
+
+.collapsible-header {
+    border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+}
+
+.collapsible-body {
+    padding: 10px;
+    border-bottom: 1px solid #607d8b;
 }
 
 nav {
