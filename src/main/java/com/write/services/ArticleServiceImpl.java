@@ -17,8 +17,8 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
-	public Page<Article> findAll(Pageable pageable) {
-		return articleRepository.findAll(pageable);
+	public Page<Article> findAllByDateDesc(Pageable pageable) {
+		return articleRepository.findAllByOrderByDateDesc(pageable);
 	}
 
 	@Override

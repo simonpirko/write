@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <!--/*/ <th:block th:include="fragments/head :: links"></th:block> /*/-->
-    <title>Write1</title>
+    <title th:text="${article.caption}"></title>
 </head>
 <body>
 <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-<p th:text="${article.caption}"></p>
+<h1 th:text="${article.caption}"></h1>
 <!--/*/ <th:block th:include="fragments/head :: scripts"></th:block> /*/-->
 </body>
 </html>

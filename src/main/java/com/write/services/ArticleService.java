@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 
 public interface ArticleService {
 
-	Page<Article> findAll(Pageable pageable);
+	Page<Article> findAllByDateDesc(Pageable pageable);
 
 	Article getArticleById(Long id);
 

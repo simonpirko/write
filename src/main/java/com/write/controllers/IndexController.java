@@ -9,10 +9,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+//@RequestMapping(path = "/")
 public class IndexController {
 
 	private ArticleService articleService;
@@ -28,13 +28,13 @@ public class IndexController {
 		this.categoryService = categoryService;
 	}
 
-	@RequestMapping(path = "/", method = RequestMethod.GET)
+	@RequestMapping(path = "/")
 	public ModelAndView index(Pageable pageable) {
 		ModelAndView mav = new ModelAndView();
-		Page<Article> articles = articleService.findAll(pageable);
+		Page<Article> articles = articleService.findAllByDateDesc(pageable);
 		Page<Category> categories = categoryService.findAllByCategoryAsc(pageable);
-		mav.addObject("articles", articles.getContent());
-		mav.addObject("categories", categories.getContent());
+		mav.addObject("article", articles.getContent());
+		mav.addObject("category", categories.getContent());
 		mav.setViewName("index");
 		return mav;
 	}

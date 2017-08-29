@@ -5,5 +5,5 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ArticleRepository extends CrudRepository<Article, Long> {
-	Page<Article> findAll(Pageable pageable);
+	Page<Article> findAllByOrderByDateDesc(Pageable pageable);
 }

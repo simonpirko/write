@@ -1,6 +1,22 @@
 a {
     cursor: pointer;
+    color: #00000099;
 }
+
+a:hover {
+    color: #cfd8dc;
+    transition: color .3s ease;
+}
+
+/*.my-white-text a:hover {*/
+    /*color: blue;*/
+    /*transition: color .3s ease;*/
+/*}*/
+
+/*.my-white-text a:hover {*/
+    /*color: #cfd8dc;*/
+    /*transition: color .3s ease;*/
+/*}*/
 
 .card .card-action a {
     color: #00000099;
@@ -10,6 +26,10 @@ a {
 .card .card-action a:hover {
     color: #cfd8dc;
     margin-right: auto;
+}
+
+.my-collapsible-body {
+    margin-left: 15px;
 }
 
 .row .col.pull-s7 {
@@ -22,7 +42,7 @@ a {
 }
 
 .row .col.s7 {
-    width: 60%;
+    width: 55%;
 }
 
 .row .col.pull-s8 {
@@ -34,6 +54,10 @@ a {
 
 .row .col.push-s5 {
     left: 30%;
+}
+
+.pagination li.active {
+    background-color: #607d8b;
 }
 
 nav {
@@ -59,10 +83,6 @@ nav .brand-logo {
     margin-bottom: 0px;
 }
 
-.dropdown-content {
-    margin-top: 45px;
-}
-
 .dropdown-content li > a, .dropdown-content li > span {
     color: #00000099;
 }
@@ -77,6 +97,10 @@ nav .brand-logo {
 @media only screen and (min-width: 601px) {
     .navbar-fixed {
         height: 50px;
+    }
+
+    nav .brand-logo {
+        left: 15px;
     }
 }
 
@@ -93,6 +117,14 @@ nav .brand-logo {
 
     .row .col.s7 {
         width: auto;
+    }
+
+    .card .card-action {
+        display: none;
+    }
+
+    .fixed-action-btn.horizontal {
+        display: none;
     }
 }
 

@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Date;
 
 @Entity
 @Table(name = "articles")
@@ -27,6 +28,9 @@ public class Article {
 
 	@Column(name = "category")
 	private String category;
+
+	@Column(name = "date")
+	private Date date;
 
 	public long getId() {
 		return id;
@@ -74,5 +78,13 @@ public class Article {
 
 	public void setCategory(String category) {
 		this.category = category;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 }

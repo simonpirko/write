@@ -17,6 +17,7 @@ CREATE TABLE `articles` (
   `heading`     VARCHAR(9000) NOT NULL,
   `author`      VARCHAR(255)  NOT NULL,
   `category`    VARCHAR(255)  NOT NULL,
+  `date`        VARCHAR(255)  NOT NULL DEFAULT current_date(),
   PRIMARY KEY (`articles_id`)
 )
 ENGINE = InnoDB
