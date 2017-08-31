@@ -1,19 +1,19 @@
 # write
 My project "Write"
 
-Stack
+# Stack:
 -----------
-Frontend:
-Materilize;
-JQuery;
+# Frontend:
+Materilize,
+JQuery,
 Thymeleaf;
 -----------
-Backend:
-Spring Boot;
-Spring MVC
-Spring Data JPA;
-Spring Security;
+# Backend:
+Spring Boot,
+Spring MVC,
+Spring Data JPA,
+Spring Security,
 Hibernate;
 -----------
-Database:
+# Database:
 H2;
