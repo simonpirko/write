@@ -1,5 +1,5 @@
-# write
-My project "Write"
+Hello, my name Simon. Am a beginner Java developer. This is my second project.
+# "WRITE"
 
 # Stack:
 -----------
