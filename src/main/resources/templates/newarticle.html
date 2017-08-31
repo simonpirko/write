@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--/*/ <th:block th:include="fragments/head :: links"></th:block> /*/-->
+    <title>New Article</title>
+</head>
+<body>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<main>
+    <div class="row">
+        <form class="col s10" th:object="${article}" th:action="@{/article/save}" method="post">
+            <input type="text" th:field="*{author}"/>
+            <input type="date" th:field="*{date}"/>
+            <div class="row">
+                <div class="input-field col s6 my-newarticle-col-s6">
+                    <input id="input_text" type="text" th:field="*{header}" data-length="10"/>
+                    <label for="input_text">Header (max:10)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s8 my-newarticle-col-s8">
+                    <input id="input_text2" type="text" th:field="*{description}"
+                           data-length="80"/>
+                    <label for="input_text2">Description (max:80)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 my-newarticle-col-s6">
+                    <!--<input id="input_text3" class="center" type="text" th:field="*{category}"-->
+                    <!--data-length="80"/>-->
+                    <!--<label for="input_text3">Category</label>-->
+                    <select th:field="*{category}">
+                        <option th:each="category : ${category}" th:text="${category.category}" type="text"
+                                th:value="${category.category}"></option>
+                    </select>
+                    <label>Category</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 my-newarticle-col-s10">
+                    <textarea id="textarea1" type="text" class="materialize-textarea" th:field="*{text}"
+                              data-length="9000"></textarea>
+                    <label for="textarea1">Text</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="my-btn-newarticle">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
+<!--/*/ <th:block th:include="fragments/head :: scripts"></th:block> /*/-->
+<script>
+    //    $('.datepicker').pickadate({
+    //        selectMonths: true, // Creates a dropdown to control month
+    //        selectYears: 15, // Creates a dropdown of 15 years to control year,
+    //        today: 'Today',
+    //        clear: 'Clear',
+    //        close: 'Ok',
+    //        closeOnSelect: false // Close upon selecting a date,
+    //    });
+    $(document).ready(function () {
+        $('input#input_text, textarea#textarea1').characterCounter();
+    });
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+    $('select').material_select('destroy');
+</script>
+</body>
+</html>

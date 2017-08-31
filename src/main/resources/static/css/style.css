@@ -13,6 +13,51 @@ a {
     color: #00000099;
 }
 
+/*.my-search {*/
+/*padding: 0px 425px;*/
+/*height: 0px;*/
+/*}*/
+
+.my-article-chips {
+    padding: 0 0 40px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.my-p-article {
+    text-align: justify;
+    text-indent: 1.5em;
+    padding: 25px 180px 10px;
+    font-size: 20px;
+    -moz-text-align-last: left;
+    text-align-last: left;
+}
+
+.my-h5-article {
+    padding: 10px 200px;
+}
+
+.my-h3-article {
+    padding: 10px 350px;
+}
+
+.my-newarticle-col-s6 {
+    left: 35%;
+}
+
+.my-newarticle-col-s8 {
+    left: 28%;
+
+}
+
+.my-newarticle-col-s10 {
+    left: 21%;
+}
+
+.my-btn-newarticle {
+    padding: 10px 22%;
+}
+
 a:hover {
     color: #cfd8dc;
     transition: color .3s ease;
@@ -25,6 +70,7 @@ nav ul a {
 .card .card-action a {
     color: #00000099;
     margin-right: auto;
+    text-transform: capitalize;
 }
 
 .card .card-action a:hover {
@@ -74,6 +120,20 @@ nav ul a {
     border-bottom: 1px solid #607d8b;
 }
 
+.collapsible-body p {
+    padding: 0;
+    color: white;
+}
+
+[type="checkbox"] + label {
+    color: #00000099;
+}
+
+[type="checkbox"] + label:hover {
+    color: #cfd8dc;
+    transition: color .3s ease;
+}
+
 nav {
     height: 45px;
     line-height: 45px;
@@ -94,7 +154,7 @@ nav .brand-logo {
 }
 
 .row {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .dropdown-content li > a, .dropdown-content li > span {
@@ -108,7 +168,7 @@ nav .brand-logo {
     }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 915px) {
     .navbar-fixed {
         height: 50px;
     }
@@ -118,46 +178,53 @@ nav .brand-logo {
     }
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 650px) {
     .row .col[class*="push-"], .row .col[class*="pull-"] {
         position: initial;
     }
 }
 
-@media only screen and (max-width: 620px) {
-    .row .col.s5 {
-        display: none;
-    }
-
+@media only screen and (max-width: 650px) {
     .row .col.s7 {
         width: 100%;
     }
 
-    .card .card-action {
-        display: none;
+    .my-p-article {
+        padding: 25px 10px;
+        font-size: 18px;
+        -moz-text-align-last: left;
+        text-align-last: left;
     }
 
-    .fixed-action-btn.horizontal {
-        display: none;
+    .my-h5-article {
+        padding: 10px 10px;
+    }
+
+    .my-h3-article {
+        padding: 10px 10px;
     }
 }
 
 @media only screen and (max-width: 790px) {
-    .row .col.s5 {
-        display: none;
-    }
-
-    .card .card-action {
-        display: none;
-    }
-
-    .fixed-action-btn.horizontal {
-        display: none;
+    nav .brand-logo {
+        left: 60px;
     }
 
     .row .col.push-s5 {
         left: auto;
         width: 100%;
+    }
+
+    .my-p-article {
+        padding: 25px 20px;
+    }
+
+    .my-h5-article {
+        padding: 10px 5px;
+    }
+
+    .my-h3-article {
+        padding: 10px 20px;
     }
 }
 

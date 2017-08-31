@@ -8,9 +8,9 @@ public interface ArticleService {
 
 	Page<Article> findAllByDateDesc(Pageable pageable);
 
-	Article getArticleById(Long id);
+	Article getArticleById(Integer id);
 
 	Article saveArticle(Article article);
 
-	void deleteArticle(Long id);
+	void deleteArticle(Integer id);
 }

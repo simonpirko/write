@@ -22,7 +22,7 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
-	public Article getArticleById(Long id) {
+	public Article getArticleById(Integer id) {
 		return articleRepository.findOne(id);
 	}
 
@@ -32,7 +32,7 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
-	public void deleteArticle(Long id) {
+	public void deleteArticle(Integer id) {
 		articleRepository.delete(id);
 	}
 }

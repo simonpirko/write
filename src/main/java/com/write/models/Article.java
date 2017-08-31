@@ -1,9 +1,6 @@
 package com.write.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
@@ -11,17 +8,18 @@ import java.sql.Date;
 public class Article {
 
 	@Id
-	@Column(name = "articles_id")
-	private long id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "article_id")
+	private Integer id;
 
-	@Column(name = "caption")
-	private String caption;
+	@Column(name = "header")
+	private String header;
 
 	@Column(name = "description")
 	private String description;
 
-	@Column(name = "heading")
-	private String heading;
+	@Column(name = "text")
+	private String text;
 
 	@Column(name = "author")
 	private String author;
@@ -32,20 +30,20 @@ public class Article {
 	@Column(name = "date")
 	private Date date;
 
-	public long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public String getCaption() {
-		return caption;
+	public String getHeader() {
+		return header;
 	}
 
-	public void setCaption(String caption) {
-		this.caption = caption;
+	public void setHeader(String header) {
+		this.header = header;
 	}
 
 	public String getDescription() {
@@ -56,12 +54,12 @@ public class Article {
 		this.description = description;
 	}
 
-	public String getHeading() {
-		return heading;
+	public String getText() {
+		return text;
 	}
 
-	public void setHeading(String heading) {
-		this.heading = heading;
+	public void setText(String text) {
+		this.text = text;
 	}
 
 	public String getAuthor() {

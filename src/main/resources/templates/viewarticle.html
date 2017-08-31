@@ -2,13 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <!--/*/ <th:block th:include="fragments/head :: links"></th:block> /*/-->
-    <title th:text="${article.caption}"></title>
+    <title th:text="${article.header}"></title>
 </head>
 <body>
 <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
 <main>
     <div>
-        <p th:text="${article.description}"></p>
+        <h3 class="my-h3-article center-align" th:text="${article.header}"></h3>
+    </div>
+    <div>
+        <h5 class="my-h5-article center-align" th:text="${article.description}"></h5>
+    </div>
+    <div>
+        <p class="my-p-article" th:text="${article.text}"></p>
+    </div>
+    <div class="my-article-chips hide-on-med-and-down">
+        <div class="chip blue-grey lighten-2">
+            <img src="https://img11.deviantart.net/e4a2/i/2016/096/f/7/avatar_icon_by_astrolink247-d9xxs6r.jpg"
+                 alt="Contact Person"/>
+            <a th:text="${article.author}"></a>
+        </div>
+        <div class="chip blue-grey lighten-2">
+            <span th:text="${article.date}"></span>
+        </div>
+        <div class="right">
+            <div class="chip blue-grey lighten-2">
+                <span th:text="${article.category}"></span>
+            </div>
+        </div>
     </div>
 </main>
 <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
