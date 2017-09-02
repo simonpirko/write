@@ -23,3 +23,4 @@ H2
 2. Install H2 database
 3. run **$mvn spring-boot:run**
 4. Go to **localhost:8080**
+5. Admin page **localhost:8080/admin**
