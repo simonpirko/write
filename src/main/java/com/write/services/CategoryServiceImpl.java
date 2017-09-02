@@ -17,22 +17,24 @@ public class CategoryServiceImpl implements CategoryService {
 	}
 
 	@Override
-	public Page<Category> findAllByCategoryAsc(Pageable pageable) {
-		return categoryRepository.findAllByOrderByCategoryAsc(pageable);
+	public Page<Category> findAllByNameAsc(Pageable pageable) {
+		return categoryRepository.findAllByOrderByNameAsc(pageable);
 	}
 
 	@Override
-	public Category getCategoryById(int id) {
+	public Category getCategoryById(Integer id) {
 		return categoryRepository.findOne(id);
 	}
 
 	@Override
 	public Category saveCategory(Category category) {
+		category.setLabel(category.getName().toLowerCase());
+		category.setUrl("/" + category.getName().toLowerCase());
 		return categoryRepository.save(category);
 	}
 
 	@Override
-	public void deleteCategory(int id) {
+	public void deleteCategory(Integer id) {
 		categoryRepository.delete(id);
 	}
 }

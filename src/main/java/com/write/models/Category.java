@@ -9,10 +9,10 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "category_id")
-	private int id;
+	private Integer id;
 
-	@Column(name = "category")
-	private String category;
+	@Column(name = "name")
+	private String name;
 
 	@Column(name = "label")
 	private String label;
@@ -25,7 +25,7 @@ public class Category {
 	}
 
 	public void setLabel(String label) {
-		this.label = category.toLowerCase();
+		this.label = label;
 	}
 
 	public String getUrl() {
@@ -33,22 +33,22 @@ public class Category {
 	}
 
 	public void setUrl(String url) {
-		this.url = "/" + category.toLowerCase();
+		this.url = url;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public String getCategory() {
-		return category;
+	public String getName() {
+		return name;
 	}
 
-	public void setCategory(String category) {
-		this.category = category;
+	public void setName(String name) {
+		this.name = name;
 	}
 }

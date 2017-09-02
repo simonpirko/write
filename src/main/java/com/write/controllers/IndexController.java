@@ -24,7 +24,7 @@ public class IndexController {
 	}
 
 	@Autowired
-	public void setCategoryService(CategoryService categoryService){
+	public void setCategoryService(CategoryService categoryService) {
 		this.categoryService = categoryService;
 	}
 
@@ -32,7 +32,7 @@ public class IndexController {
 	public ModelAndView index(Pageable pageable) {
 		ModelAndView mav = new ModelAndView();
 		Page<Article> articles = articleService.findAllByDateDesc(pageable);
-		Page<Category> categories = categoryService.findAllByCategoryAsc(pageable);
+		Page<Category> categories = categoryService.findAllByNameAsc(pageable);
 		mav.addObject("article", articles.getContent());
 		mav.addObject("category", categories.getContent());
 		mav.setViewName("index");

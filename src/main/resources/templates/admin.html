@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--/*/ <th:block th:include="fragments/head :: links"></th:block> /*/-->
+    <title>ADMIN</title>
+</head>
+<body>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<div>
+    <p th:text="${'Кол-во категорий: ' + categoryTotal}"></p>
+    <p th:text="${'Кол-во записей: ' + articleTotal}"></p>
+</div>
+<div th:each="category : ${category}">
+    <p th:text="${category.name}"></p>
+</div>
+<div>
+    <a th:href="@{/admin/new/category}">Добавить новую категорию</a>
+</div>
+<!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
+<!--/*/ <th:block th:include="fragments/head :: scripts"></th:block> /*/-->
+</body>
+</html>

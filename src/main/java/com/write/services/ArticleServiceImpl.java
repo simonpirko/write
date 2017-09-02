@@ -28,6 +28,7 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Override
 	public Article saveArticle(Article article) {
+		article.setAuthor("GUEsR".toLowerCase());
 		return articleRepository.save(article);
 	}
 

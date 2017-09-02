@@ -14,7 +14,7 @@
                     <div class="collapsible-header blue-grey waves-effect waves-blue-grey">Category</div>
                     <div class="collapsible-body blue-grey lighten-2">
                         <ul th:each="category : ${category}">
-                            <li><a th:href="${category.url}" th:text="${category.category}"></a></li>
+                            <li><a th:href="${category.url}" th:text="${category.name}"></a></li>
                         </ul>
                     </div>
                 </li>

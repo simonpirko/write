@@ -2,7 +2,6 @@ package com.write.models;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.UUID;
 
 @Entity
 @Table(name = "users")
@@ -12,8 +11,6 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "users_id")
 	private long id;
-
-	private UUID uuid;
 
 	@Column(name = "first_name")
 	private String firstName;
@@ -29,14 +26,6 @@ public class User {
 
 	@Column(name = "live_country")
 	private String liveCountry;
-
-	public UUID getUuid() {
-		return uuid;
-	}
-
-	public void setUuid(UUID uuid) {
-		this.uuid = uuid;
-	}
 
 	public long getId() {
 		return id;

@@ -5,5 +5,5 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 
 public interface CategoryRepository extends CrudRepository<Category, Integer> {
-	Page<Category> findAllByOrderByCategoryAsc(Pageable pageable);
+	Page<Category> findAllByOrderByNameAsc(Pageable pageable);
 }

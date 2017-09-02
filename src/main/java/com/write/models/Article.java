@@ -1,5 +1,8 @@
 package com.write.models;
 
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
+
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -27,6 +30,7 @@ public class Article {
 	@Column(name = "category")
 	private String category;
 
+	@Generated(GenerationTime.ALWAYS)
 	@Column(name = "date")
 	private Date date;
 

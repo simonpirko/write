@@ -45,7 +45,7 @@ public class ArticleController {
 	public String newArticle(Model model, Pageable pageable) {
 //		ModelAndView mav = new ModelAndView();
 		model.addAttribute("article", new Article());
-		Page<Category> categories = categoryService.findAllByCategoryAsc(pageable);
+		Page<Category> categories = categoryService.findAllByNameAsc(pageable);
 		model.addAttribute("category", categories.getContent());
 		return "newarticle";
 	}
