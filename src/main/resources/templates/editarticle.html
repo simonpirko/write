@@ -16,18 +16,12 @@
             <input type="hidden" th:field="*{author}"/>
             <input type="hidden" th:field="*{date}"/>
             <input type="hidden" th:field="*{header}"/>
+            <input type="hidden" th:field="*{category}"/>
             <div class="row">
                 <div class="input-field col s8 my-newarticle-col-s8">
                     <input id="input_text2" class="center" type="text" th:field="*{description}"
                            data-length="80"/>
-                    <label for="input_text2">Description (max:80)</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s8 my-newarticle-col-s8">
-                    <input id="input_text3" class="center" type="text" th:field="*{category}"
-                           data-length="80"/>
-                    <label for="input_text3">Category</label>
+                    <label for="input_text2">Description</label>
                 </div>
             </div>
             <div class="row">
@@ -38,9 +32,11 @@
                 </div>
             </div>
             <div class="row">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
+                <div class="my-btn-newarticle">
+                    <button class="btn waves-effect waves-light grey lighten-2" type="submit" name="action">SEND
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
             </div>
         </form>
     </div>

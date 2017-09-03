@@ -43,7 +43,7 @@ public class IndexController {
 	@RequestMapping(path = "/{category}")
 	public ModelAndView showCategory(@PathVariable String category, Pageable pageable){
 		ModelAndView mav = new ModelAndView();
-		Page<Article> articles = articleService.findAllByCategory(category,pageable);
+		Page<Article> articles = articleService.findAllByCategoryOrderByDateDesc(category,pageable);
 		Page<Category> categories = categoryService.findAllByNameAsc(pageable);
 		mav.addObject("article", articles.getContent());
 		mav.addObject("category", categories.getContent());

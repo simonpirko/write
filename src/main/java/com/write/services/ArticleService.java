@@ -8,7 +8,7 @@ public interface ArticleService {
 
 	Page<Article> findAllByDateDesc(Pageable pageable);
 
-	Page<Article> findAllByCategory(String category, Pageable pageable);
+	Page<Article> findAllByCategoryOrderByDateDesc(String category, Pageable pageable);
 
 	Article getArticleById(Integer id);
 

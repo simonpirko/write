@@ -4,8 +4,24 @@ body {
     flex-direction: column;
 }
 
+.grey.lighten-2{
+    color: #607d8b;
+}
+
 main {
     flex: 1 0 auto;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+h5 {
+    font-weight: 300;
+}
+
+h6{
+    font-weight: 300;
 }
 
 a {
@@ -64,7 +80,7 @@ nav ul a {
     color: #607d8b;
 }
 
-.btn-floating i{
+.btn-floating i {
     color: #607d8b;
 }
 
@@ -74,15 +90,15 @@ nav ul a {
     text-transform: capitalize;
 }
 
-.chip{
+.chip {
     text-transform: capitalize;
 }
 
-.dropdown-content li>a, .dropdown-content li>span{
+.dropdown-content li > a, .dropdown-content li > span {
     text-transform: capitalize;
 }
 
-ul{
+ul {
     color: rgba(18, 18, 18, 0.6);
 }
 
@@ -215,6 +231,15 @@ nav .brand-logo {
     .my-h3-article {
         padding: 10px 10px;
     }
+}
+
+.no-contents {
+    padding-left: 45%;
+    padding-top: 15%;
+}
+
+.select-wrapper input.select-dropdown {
+    text-transform: capitalize;
 }
 
 @media only screen and (max-width: 790px) {
