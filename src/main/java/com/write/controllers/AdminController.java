@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 
-
 @Controller
 //@RequestMapping(path = "/admin")
 public class AdminController {
+
 	private CategoryService categoryService;
 	private ArticleService articleService;
 
@@ -27,12 +27,12 @@ public class AdminController {
 	}
 
 	@Autowired
-	public void setArticleService(ArticleService articleService){
+	public void setArticleService(ArticleService articleService) {
 		this.articleService = articleService;
 	}
 
 	@RequestMapping(path = "/admin")
-	public ModelAndView adminPage(Pageable pageable){
+	public ModelAndView adminPage(Pageable pageable) {
 		ModelAndView mav = new ModelAndView();
 		Page<Category> categoryList = categoryService.findAllByNameAsc(pageable);
 		Page<Article> articleList = articleService.findAllByDateDesc(pageable);
@@ -52,7 +52,7 @@ public class AdminController {
 	}
 
 	@RequestMapping(path = "/admin/new/save", method = RequestMethod.POST)
-	public String saveCategory(Category category){
+	public String saveCategory(Category category) {
 //		ModelAndView mav = new ModelAndView();
 		categoryService.saveCategory(category);
 //		mav.setViewName("index");
