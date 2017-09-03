@@ -30,7 +30,7 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Override
 	public Article saveArticle(Article article) {
-		article.setAuthor("Guest".toLowerCase());
+		article.setAuthor("Denis Gurcev".toLowerCase());
 		return articleRepository.save(article);
 	}
 
