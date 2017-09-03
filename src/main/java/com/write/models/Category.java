@@ -14,19 +14,8 @@ public class Category {
 	@Column(name = "name")
 	private String name;
 
-	@Column(name = "label")
-	private String label;
-
 	@Column(name = "url")
 	private String url;
-
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
-	}
 
 	public String getUrl() {
 		return url;

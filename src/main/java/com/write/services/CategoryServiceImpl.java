@@ -30,8 +30,8 @@ public class CategoryServiceImpl implements CategoryService {
 
 	@Override
 	public Category saveCategory(Category category) {
-		category.setLabel(category.getName().toLowerCase());
-		category.setUrl("/" + category.getName().toLowerCase());
+		category.setName(category.getName().toLowerCase());
+		category.setUrl("/" + category.getName());
 		return categoryRepository.save(category);
 	}
 

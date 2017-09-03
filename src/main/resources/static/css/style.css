@@ -64,9 +64,21 @@ nav ul a {
     color: #607d8b;
 }
 
+.btn-floating i{
+    color: #607d8b;
+}
+
 .card .card-action a {
     color: rgba(18, 18, 18, 0.6);
     margin-right: auto;
+    text-transform: capitalize;
+}
+
+.chip{
+    text-transform: capitalize;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
     text-transform: capitalize;
 }
 

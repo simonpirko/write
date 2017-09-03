@@ -26,7 +26,6 @@ DEFAULT CHARSET = utf8;
 CREATE TABLE `categories` (
   `category_id` INT          NOT NULL AUTO_INCREMENT,
   `name`        VARCHAR(255) NOT NULL,
-  `label`       VARCHAR(255),
   `url`         VARCHAR(255),
   PRIMARY KEY (`category_id`)
 )

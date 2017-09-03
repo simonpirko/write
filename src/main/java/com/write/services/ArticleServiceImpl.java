@@ -24,6 +24,11 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
+	public Page<Article> findAllByCategory(String category, Pageable pageable) {
+		return articleRepository.findAllByCategory(category, pageable);
+	}
+
+	@Override
 	public Article getArticleById(Integer id) {
 		return articleRepository.findOne(id);
 	}

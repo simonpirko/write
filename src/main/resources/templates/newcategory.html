@@ -2,14 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <!--/*/ <th:block th:include="fragments/head :: links"></th:block> /*/-->
-    <title>ADMIN</title>
+    <title>Admin page</title>
 </head>
 <body>
 <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-<form th:object="${category}"  th:action="@{/admin/new/save}" method="post">
-    <input type="text" th:field="*{name}"/>
-    <button type="submit" name="action">OK</button>
-</form>
+<main>
+    <div class="row">
+        <div class="input-field col s6">
+            <form th:object="${category}" th:action="@{/admin/new/save}" method="post">
+                <input type="text" th:field="*{name}"/>
+                <label>New category name</label>
+                <button type="submit" name="action">OK</button>
+            </form>
+        </div>
+    </div>
+</main>
 <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
 <!--/*/ <th:block th:include="fragments/head :: scripts"></th:block> /*/-->
 </body>
