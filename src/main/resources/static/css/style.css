@@ -10,14 +10,9 @@ main {
 
 a {
     cursor: pointer;
-    color: rgba(41, 41, 41, 0.6);
+    color: rgba(18, 18, 18, 0.6);
     text-transform: capitalize;
 }
-
-/*.my-search {*/
-/*padding: 0px 425px;*/
-/*height: 0px;*/
-/*}*/
 
 .my-article-chips {
     padding: 0 0 40px;
@@ -60,22 +55,27 @@ a {
 }
 
 a:hover {
-    color: #cfd8dc;
+    color: #000000;
     transition: color .3s ease;
 }
 
 nav ul a {
     padding: 0 25px;
+    color: #607d8b;
 }
 
 .card .card-action a {
-    color: #373737;
+    color: rgba(18, 18, 18, 0.6);
     margin-right: auto;
     text-transform: capitalize;
 }
 
+ul{
+    color: rgba(18, 18, 18, 0.6);
+}
+
 .card .card-action a:hover {
-    color: #cfd8dc;
+    color: #000000;
     margin-right: auto;
 }
 
@@ -108,8 +108,7 @@ nav ul a {
 }
 
 .collapsible {
-    border-color: #607d8b;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .collapsible-header {
@@ -118,7 +117,6 @@ nav ul a {
 
 .collapsible-body {
     padding: 10px;
-    border-bottom: 1px solid #607d8b;
 }
 
 .collapsible-body p {
@@ -131,7 +129,7 @@ nav ul a {
 }
 
 [type="checkbox"] + label:hover {
-    color: #cfd8dc;
+    color: #000000;
     transition: color .3s ease;
 }
 
@@ -175,6 +173,7 @@ nav .brand-logo {
     }
 
     nav .brand-logo {
+        color: #607d8b;
         left: 20px;
     }
 }
@@ -209,6 +208,7 @@ nav .brand-logo {
 @media only screen and (max-width: 790px) {
     nav .brand-logo {
         left: 60px;
+        color: #607d8b;
     }
 
     .row .col.push-s5 {
@@ -228,12 +228,4 @@ nav .brand-logo {
         padding: 10px 20px;
     }
 }
-
-@media only screen and (min-width: 1200px){
-    html{
-        background-color: #f2f1dc;
-    }
-}
-
-    html
 
