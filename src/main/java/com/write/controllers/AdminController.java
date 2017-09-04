@@ -46,7 +46,7 @@ public class AdminController {
 		return mav;
 	}
 
-	@RequestMapping(path = "/admin/new/category")
+	@RequestMapping(path = "/admin/category/new")
 	public String createCategory(Model model) {
 //		ModelAndView mav = new ModelAndView();
 		model.addAttribute("category", new Category());
@@ -54,13 +54,13 @@ public class AdminController {
 		return "newcategory";
 	}
 
-	@RequestMapping(path = "/admin/category/{id}")
-	public String getCategory(@PathVariable Integer id, Model model){
-		model.addAttribute("category", categoryService.getCategoryById(id));
-		return "editcategory";
+	@RequestMapping(path = "/admin/category/delete/{id}")
+	public String deleteCategory(@PathVariable Integer id){
+		categoryService.deleteCategory(id);
+		return "redirect:/admin";
 	}
 
-	@RequestMapping(path = "/admin/new/save", method = RequestMethod.POST)
+	@RequestMapping(path = "/admin/category/save", method = RequestMethod.POST)
 	public String saveCategory(Category category) {
 //		ModelAndView mav = new ModelAndView();
 		categoryService.saveCategory(category);

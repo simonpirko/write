@@ -9,7 +9,7 @@
 <main>
     <div class="row">
         <div class="input-field col s6">
-            <form th:object="${category}" th:action="@{/admin/new/save}" method="post">
+            <form th:object="${category}" th:action="@{/admin/category/save}" method="post">
                 <input type="text" th:field="*{name}"/>
                 <label>New category name</label>
                 <button type="submit" name="action">OK</button>

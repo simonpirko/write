@@ -15,11 +15,14 @@
             </div>
             <div style="text-transform: capitalize">
                 <div th:each="category : ${category}">
-                    <a th:href="${'admin/category/' + category.id}" th:text="${category.name}"></a>
+                    <p th:text="${category.name}"></p>
+                    <form th:action="${'/admin/category/delete/' + category.id}">
+                        <button type="submit">Удалить</button>
+                    </form>
                 </div>
             </div>
             <div>
-                <a th:href="@{/admin/new/category}">Добавить новую категорию</a>
+                <a th:href="@{/admin/category/new}">Добавить новую категорию</a>
             </div>
         </div>
     </div>

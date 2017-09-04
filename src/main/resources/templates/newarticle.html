@@ -9,7 +9,6 @@
 <main>
     <div class="row">
         <form class="col s10" th:object="${article}" th:action="@{/article/save}" method="post">
-            <!--<input type="text" th:field="*{author}"/>-->
             <div class="row">
                 <div class="input-field col s6 my-newarticle-col-s6">
                     <input id="input_text" type="text" th:field="*{header}" data-length="10"/>
