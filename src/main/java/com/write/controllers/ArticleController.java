@@ -5,13 +5,14 @@ import com.write.models.Category;
 import com.write.services.ArticleService;
 import com.write.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 @Controller
 @RequestMapping(path = "/article")
@@ -45,8 +46,8 @@ public class ArticleController {
 	public String newArticle(Model model, Pageable pageable) {
 //		ModelAndView mav = new ModelAndView();
 		model.addAttribute("article", new Article());
-		Page<Category> categories = categoryService.findAllByNameAsc(pageable);
-		model.addAttribute("category", categories.getContent());
+		List<Category> categories = categoryService.findAllByNameAsc();
+		model.addAttribute("category", categories.toArray());
 		return "newarticle";
 	}
 

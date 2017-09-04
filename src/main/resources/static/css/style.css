@@ -4,8 +4,9 @@ body {
     flex-direction: column;
 }
 
-.grey.lighten-2{
-    color: #607d8b;
+.grey.lighten-2 {
+    color: rgba(0, 0, 0, 0.9);
+    text-transform: capitalize;
 }
 
 main {
@@ -20,14 +21,13 @@ h5 {
     font-weight: 300;
 }
 
-h6{
+h6 {
     font-weight: 300;
 }
 
 a {
     cursor: pointer;
-    color: rgba(18, 18, 18, 0.6);
-    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .my-article-chips {
@@ -77,15 +77,15 @@ a:hover {
 
 nav ul a {
     padding: 0 25px;
-    color: #607d8b;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .btn-floating i {
-    color: #607d8b;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .card .card-action a {
-    color: rgba(18, 18, 18, 0.6);
+    color: rgba(0, 0, 0, 0.8);
     margin-right: auto;
     text-transform: capitalize;
 }
@@ -96,10 +96,11 @@ nav ul a {
 
 .dropdown-content li > a, .dropdown-content li > span {
     text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 ul {
-    color: rgba(18, 18, 18, 0.6);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .card .card-action a:hover {
@@ -132,11 +133,12 @@ ul {
 }
 
 .pagination li.active {
-    background-color: #607d8b;
+    background-color: darkgray;
 }
 
 .collapsible {
     border-radius: 5px;
+    border-top: none;
 }
 
 .collapsible-header {
@@ -184,10 +186,6 @@ nav .brand-logo {
     margin-bottom: 0;
 }
 
-.dropdown-content li > a, .dropdown-content li > span {
-    color: rgba(39, 39, 39, 0.6);
-}
-
 @media only screen and (min-width: 601px) {
     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
         height: 45px;
@@ -201,7 +199,7 @@ nav .brand-logo {
     }
 
     nav .brand-logo {
-        color: #607d8b;
+        color: rgba(0, 0, 0, 0.8);
         left: 20px;
     }
 }
@@ -263,6 +261,11 @@ nav .brand-logo {
 
     .my-h3-article {
         padding: 10px 20px;
+    }
+
+    .no-contents{
+        padding-left: 15%;
+        padding-top: 15%;
     }
 }
 

@@ -3,10 +3,10 @@ package com.write.services;
 import com.write.models.Category;
 import com.write.models.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -19,8 +19,8 @@ public class CategoryServiceImpl implements CategoryService {
 	}
 
 	@Override
-	public Page<Category> findAllByNameAsc(Pageable pageable) {
-		return categoryRepository.findAllByOrderByNameAsc(pageable);
+	public List<Category> findAllByNameAsc() {
+		return categoryRepository.findAllByOrderByNameAsc();
 	}
 
 	@Override

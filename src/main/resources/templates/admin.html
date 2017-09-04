@@ -13,8 +13,10 @@
                 <p th:text="${'Кол-во категорий: ' + categoryTotal}"></p>
                 <p th:text="${'Кол-во записей: ' + articleTotal}"></p>
             </div>
-            <div th:each="category : ${category}">
-                <p th:text="${category.name}"></p>
+            <div style="text-transform: capitalize">
+                <div th:each="category : ${category}">
+                    <a th:href="${'admin/category/' + category.id}" th:text="${category.name}"></a>
+                </div>
             </div>
             <div>
                 <a th:href="@{/admin/new/category}">Добавить новую категорию</a>

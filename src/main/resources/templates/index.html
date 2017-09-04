@@ -92,17 +92,15 @@
     </div>
     <div th:if="${not #lists.isEmpty(article)}">
         <ul class="pagination center">
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="#!">1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li>
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            <li th:each='item : ${page.items}' th:class="${item.current}? 'active' : ''">
+                <span th:if='${item.current}' th:text='${item.number}'>1</span>
+                <a th:if='${not item.current}'
+                   th:href='@{${page.url}(page=${item.number-1},size=${page.size})}'><span th:text='${item.number}'>1</span></a>
+            </li>
         </ul>
     </div>
     <div class="no-contents" th:if="${#lists.isEmpty(article)}">
-        <span>No contents!</span>
+        <h5>Sorry, but nothing is found!</h5>
     </div>
 </main>
 <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->

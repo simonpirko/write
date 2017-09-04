@@ -9,9 +9,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 
 @Controller
@@ -34,10 +37,10 @@ public class AdminController {
 	@RequestMapping(path = "/admin")
 	public ModelAndView adminPage(Pageable pageable) {
 		ModelAndView mav = new ModelAndView();
-		Page<Category> categoryList = categoryService.findAllByNameAsc(pageable);
+		List<Category> categoryList = categoryService.findAllByNameAsc();
 		Page<Article> articleList = articleService.findAllByDateDesc(pageable);
-		mav.addObject("category", categoryList.getContent());
-		mav.addObject("categoryTotal", categoryList.getTotalElements());
+		mav.addObject("category", categoryList.toArray());
+		mav.addObject("categoryTotal", categoryList.size());
 		mav.addObject("articleTotal", articleList.getTotalElements());
 		mav.setViewName("admin");
 		return mav;
@@ -49,6 +52,12 @@ public class AdminController {
 		model.addAttribute("category", new Category());
 //		mav.setViewName("admin");
 		return "newcategory";
+	}
+
+	@RequestMapping(path = "/admin/category/{id}")
+	public String getCategory(@PathVariable Integer id, Model model){
+		model.addAttribute("category", categoryService.getCategoryById(id));
+		return "editcategory";
 	}
 
 	@RequestMapping(path = "/admin/new/save", method = RequestMethod.POST)
