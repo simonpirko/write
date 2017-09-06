@@ -119,3 +119,6 @@ INSERT INTO `categories` VALUES (
 INSERT INTO `categories` VALUES (
   4, 'books', '/books'
 );
+
+INSERT INTO `role` VALUES (1, 'ADMIN');
+INSERT INTO `role` VALUES (2, 'USER');

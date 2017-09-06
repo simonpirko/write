@@ -3,9 +3,11 @@ package com.write.services;
 import com.write.models.User;
 
 public interface UserService {
-	User getUserById(Integer id);
+//	User getUserById(Integer id);
 
-	User saveUser(User user);
+	void saveUser(User user);
 
-	void deleteUser(Integer id);
+//	void deleteUser(Integer id);
+
+	User findUserByEmail(String email);
 }

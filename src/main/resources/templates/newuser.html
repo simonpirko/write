@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--/*/ <th:block th:include="fragments/head :: links"></th:block> /*/-->
+    <title>New User</title>
+</head>
+<body>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+<main>
+    <div class="row">
+        <form class="col s12" role="form" action="#" autocomplete="off" th:action="@{/registration}"
+              th:object="${user}" method="post">
+            <h2>Registration Form</h2>
+            <div>
+                <div>
+                    <label th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></label>
+                    <input type="text" th:field="*{firstName}" placeholder="First Name"/>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></label>
+                    <input type="text" th:field="*{lastName}" placeholder="Last Name"/>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="text" th:field="*{email}" placeholder="Email"/>
+                    <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="password" th:field="*{password}"
+                           placeholder="Password"/> <label
+                        th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></label>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="date" th:field="*{bornDate}"
+                           placeholder="Born Date"/>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="text" th:field="*{liveCountry}"
+                           placeholder="Live Country"/>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <button type="submit">Register User</button>
+                </div>
+            </div>
+
+            <span th:utext="${successMessage}"></span>
+        </form>
+    </div>
+</main>
+<!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
+<!--/*/ <th:block th:include="fragments/head :: scripts"></th:block> /*/-->
+</body>
+</html>
