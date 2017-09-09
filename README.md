@@ -13,7 +13,8 @@ Spring Boot,
 Spring MVC,
 Spring Data JPA,
 Spring Security,
-Hibernate
+Hibernate,
+HikariCP
 -----------
 # Database:
 H2
