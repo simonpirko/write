@@ -1,25 +1,14 @@
-Hello, my name Simon. Am a beginner Java developer. This is my second project.
-# "WRITE"
+*Hello, my name Simon. Am a beginner Java developer. This is my second project.*
 
-# Stack:
------------
-# Frontend:
-Materilize,
-JQuery,
-Thymeleaf
------------
-# Backend:
-Spring Boot,
-Spring MVC,
-Spring Data JPA,
-Spring Security,
-Hibernate,
-HikariCP
------------
-# Database:
-H2
------------
-# Start:
+**Project:** Write
+
+**Frontend:** Materilize, JQuery, Thymeleaf
+
+**Backend:** Spring Boot, Spring MVC, Spring Data JPA, Spring Security, Hibernate, HikariCP
+
+**Database:** H2
+
+**Start:**
 1. Clone https://github.com/sipi7github/write.git
 2. Install H2 database
 3. run **$mvn spring-boot:run**
