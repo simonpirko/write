@@ -1,5 +1,3 @@
-*Hello, my name Simon. Am a beginner Java developer. This is my second project.*
-
 **Project:** Write
 
 **Frontend:** Materilize, JQuery, Thymeleaf
