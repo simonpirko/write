@@ -2,7 +2,7 @@
 
 **Frontend:** Materilize, JQuery, Thymeleaf
 
-**Backend:** Spring Boot, Spring MVC, Spring Data JPA, Spring Security, Hibernate, HikariCP
+**Backend:** Spring Boot, Spring MVC, Spring Data JPA, Spring Security, Hibernate.
 
 **Database:** H2
 
